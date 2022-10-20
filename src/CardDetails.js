@@ -1,35 +1,38 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
+import { Route, NavLink, Link } from 'react-router-dom';
+import App from './App';
 
-class CardDetails extends Component  {
+class CardDetails extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      movie: this.props.movie,
-      id: this.props.movie.id
+      movie: null,
+      id: this.props.id
     }
   }
-  
-  componentDidMount = ()  => {
+
+  componentDidMount = () => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.state.id}`)
-    .then(response => response.json())
-    .then(data => this.setState({movie: data.movie}))
+      .then(response => response.json())
+      .then(data => this.setState({ movie: data.movie }))
   }
 
   render() {
-    console.log(this.state.movie.id)
-  return (
-    <div className='card'>
-      {/* style={{backgroundImage: `url(${props.movie.backdrop_path})`, width: '150vh', height: '100vh'}}>  */}
-      <button className="home-button" onClick={this.props.handleChange}>Home</button>
-      <h1>{this.state.movie.title}</h1> <br/>
-      Rating: {this.state.movie.average_rating}/10
-      <img src={this.state.movie.poster_path} /> <br/>
-      <h4>Genres: {this.state.movie.genres}</h4> 
-      {this.state.movie.overview}
-    </div>
-  )
-}
-}
+    return (this.state.movie) ? (
+      <div className='card'>
+        {/* style={{backgroundImage: `url(${props.movie.backdrop_path})`, width: '150vh', height: '100vh'}}>  */}
+        <Link to='/'>
+        <button className="home-button">Home</button>
+        </Link>
+        <h1>{this.state.movie.title}</h1> <br />
+        Rating: ⭐️ {this.state.movie.average_rating.toFixed(2)}/10
+        <img className="movie-details-image" src={this.state.movie.poster_path} /> <br />
+        <h4>Genres: {this.state.movie.genres.join(', ')}</h4> <br/>
+        {this.state.movie.overview}
+      </div>
+    ) : null
+    } 
+  } 
 
 
 
