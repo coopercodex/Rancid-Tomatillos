@@ -28,13 +28,12 @@ class CardDetails extends Component {
   render() {
     return (this.state.movie) ? (
       <div className='card'>
-        {/* style={{backgroundImage: `url(${props.movie.backdrop_path})`, width: '150vh', height: '100vh'}}>  */}
         <h1>{this.state.movie.title}</h1> <br />
-        Rating: ⭐️ {this.state.movie.average_rating.toFixed(2)}/10
-        <img className="movie-details-image" src={this.state.movie.poster_path} /> <br />
-        <ReactPlayer url={`https://www.youtube.com/embed/${this.state.video}`} controls={true} /> 
+        Rating: ⭐️ {this.state.movie.average_rating.toFixed(2)}/10 · {this.state.movie.runtime} min<br />
+        <div className="movies-images"><img className="movie-details-image" src={this.state.movie.poster_path} />
+          <ReactPlayer className="react-player" url={`https://www.youtube.com/embed/${this.state.video}`} controls={true} /> </div>
         <div className='card-details'><h4>Genres: {this.state.movie.genres.join(', ')}</h4> <br />
-          {this.state.movie.overview}
+          <p>{this.state.movie.overview}</p>
         </div>
       </div>
     ) : null

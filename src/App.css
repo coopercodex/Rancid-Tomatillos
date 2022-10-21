@@ -51,15 +51,21 @@ body {
 
 .card,
 .movie-details-image {
-  flex-flow: row wrap;
+  display: block;
+  justify-content: space-between;
   background-color: rgb(15, 15, 15);
   padding: 5px;
-  display: block;
   align-self: center;
-  width: 30rem;
-  height: 30rem;
+  width: 21rem;
+  height: 22.2rem;
   /* padding: 10px; */
   color: whitesmoke;
+}
+
+.movies-images {
+  width: 55rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .movie-poster {
@@ -104,4 +110,10 @@ body {
   font-size: 0.9rem;
   color: whitesmoke;
   -webkit-font-smoothing: auto;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  width: 150%;
 }

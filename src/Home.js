@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 const Home = ({movies}) => {
   const getMovies = movies.map((movie) => {
     return <Movies  movie={movie} key={movie.id} id={movie.id} /> 
-
   });
 
 return (
