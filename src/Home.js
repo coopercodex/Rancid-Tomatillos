@@ -1,5 +1,6 @@
 import React from 'react';
 import Movies from './Movies';
+import {Link} from 'react-router-dom';
 
 
 const Home = ({movies}) => {
