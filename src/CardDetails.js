@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import App from './App';
+import Movies from './Movies';
 
 class CardDetails extends Component {
   constructor(props) {
@@ -22,12 +23,10 @@ class CardDetails extends Component {
       .then(data => {
         this.setState({ video: data.videos[0].key })
       })
-  }
-
-
-  render() {
-    return (this.state.movie) ? (
-      <div className='card'>
+    }
+    render() {
+      return (this.state.movie) ? (
+        <div className='card'>
         <h1>{this.state.movie.title}</h1> <br />
         Rating: ⭐️ {this.state.movie.average_rating.toFixed(2)}/10 · {this.state.movie.runtime} min<br />
         <div className="movies-images"><img className="movie-details-image" src={this.state.movie.poster_path} />

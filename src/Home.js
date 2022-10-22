@@ -1,6 +1,7 @@
 import React from 'react';
 import Movies from './Movies';
 import {Link} from 'react-router-dom';
+import CardDetails from './CardDetails';
 
 
 const Home = ({movies}) => {
