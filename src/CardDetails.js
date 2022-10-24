@@ -30,7 +30,7 @@ class CardDetails extends Component {
         <h1>{this.state.movie.title}</h1> <br />
         Rating: ⭐️ {this.state.movie.average_rating.toFixed(2)}/10 · {this.state.movie.runtime} min<br />
         <div className="movies-images"><img className="movie-details-image" src={this.state.movie.poster_path} />
-          <ReactPlayer className="react-player" url={`https://www.youtube.com/embed/${this.state.video}`} controls={true} /> </div>
+          <ReactPlayer className="react-player" url={`https://www.youtube-nocookie.com/embed/${this.state.video}`} controls={true} playing={true} muted={true} /> </div>
         <div className='card-details'><h4>Genres: {this.state.movie.genres.join(', ')}</h4> <br />
           <p>{this.state.movie.overview}</p>
         </div>
