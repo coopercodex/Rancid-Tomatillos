@@ -21,7 +21,7 @@ body {
   background-color: rgb(15, 15, 15);
 }
 
-.home-button {
+.home-button, .find-theater {
   margin-top: 1.5rem;
   margin-left: 3rem;
   height: min-content;
@@ -29,7 +29,7 @@ body {
   color: darkgray;
 }
 
-.home-button:hover {
+.home-button:hover, .find-theater:hover {
   text-decoration: none;
   color: rgb(41, 147, 218);
 }
