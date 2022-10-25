@@ -38,8 +38,7 @@
 
 
 
-
-
+<iframe src="https://giphy.com/embed/aXgkitIO52jyMMrgBC" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/aXgkitIO52jyMMrgBC">via GIPHY</a></p>
 
 
 
