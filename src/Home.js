@@ -1,9 +1,5 @@
 import React from 'react';
 import Movies from './Movies';
-import { Link } from 'react-router-dom';
-import CardDetails from './CardDetails';
-import Featured from './Featured';
-
 
 const Home = ({ movies }) => {
   const getMovies = movies.map((movie) => {
@@ -17,7 +13,7 @@ const Home = ({ movies }) => {
       </div>
     </>
   )
-}
+} 
 
 
 export default Home;

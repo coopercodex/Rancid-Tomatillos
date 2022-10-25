@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { MdOutlineArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md';
-import Movies from './Movies';
+import { Link, NavLink, Route } from 'react-router-dom';
+import CardDetails from './CardDetails';
 
 const Featured = ({ movies }) => {
   const featuredMovies = movies.reduce((acc, movie) => {
     if (movie.average_rating > 6) {
-      acc.push(movie.poster_path)
+      acc.push(movie)
     }
     return acc;
   }, []);
@@ -40,21 +41,19 @@ const Featured = ({ movies }) => {
     }
     return () => clearInterval(slideInterval)
   }, [currentIndex])
-
-  return (
-    <div className='featured'>
+ 
+  return (movies[currentIndex]) ? (
+    <div className='featured' style={{backgroundImage: `url(${featuredMovies[currentIndex].backdrop_path})`, backgroundSize: 'cover'}}>
       <h2 className='top-rated'>Top Rated IMBD</h2>
-      <img src={`${featuredMovies[currentIndex]}`} />
+      <img src={`${featuredMovies[currentIndex].poster_path}`} id={`${featuredMovies[currentIndex].id}`} alt="current movie" />
       <div className='right-arrow' onClick={handleClickRight}><MdOutlineArrowForwardIos /></div>
       <div className='left-arrow' onClick={handleClickLeft}><MdOutlineArrowBackIos /></div>
       <div className='dots-container'>{featuredMovies.map((slide, index) => (
         <div className='dots' key={index} onClick={() => { findSlide(index) }}>·</div>
       ))} </div>
     </div>
-  )
+  ) : null
 }
-
-
 
 
 export default Featured;
