@@ -24,7 +24,7 @@ class CardDetails extends Component {
     
     render() {
       return (this.state.movie) ? (
-        <div className='card'>
+        <section className='card'>
         <h1>{this.state.movie.title}</h1> <br />
         Rating: ⭐️ {this.state.movie.average_rating.toFixed(2)}/10 · {this.state.movie.runtime} min<br />
         <div className="movies-images"><img className="movie-details-image" src={this.state.movie.poster_path} alt="movie with details"/>
@@ -32,7 +32,7 @@ class CardDetails extends Component {
         <div className='card-details'><h4>Genres: {this.state.movie.genres.join(', ')}</h4> <br />
           <p>{this.state.movie.overview}</p>
         </div>
-      </div>
+      </section>
     ) : null
   }
 }

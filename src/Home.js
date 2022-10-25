@@ -13,7 +13,7 @@ const Home = ({ movies }) => {
       </div>
     </>
   )
-} 
+}  
 
 
 export default Home;
