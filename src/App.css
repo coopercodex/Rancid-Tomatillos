@@ -152,7 +152,7 @@ body {
   opacity: 1;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
-  
+  box-shadow: 5px 5px 6px rgb(15, 15, 15);
 }
 
 .featured img {
@@ -214,13 +214,14 @@ body {
 }
 
 .dots {
-  color: rgb(168, 164, 164);
+  color: white;
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 5rem;
+  -webkit-font-smoothing: auto;
 }
 
 .dots:hover {
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   color: hsl(98 100% 62%);
 }
 
@@ -232,4 +233,17 @@ body {
   color: black;
   background-color: #f5c518;
   border-radius: 2.5px;
+}
+
+.featured-details {
+  position: absolute;
+  font-weight: bolder;
+  font-size: xx-large;
+  padding-bottom: 29rem;
+  padding-right: 20rem;
+  color: #f5c518;;
+  opacity: 0;
+}
+.featured-details:hover {
+  opacity: 1;
 }

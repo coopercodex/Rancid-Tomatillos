@@ -46,6 +46,7 @@ const Featured = ({ movies }) => {
     <div className='featured' style={{backgroundImage: `url(${featuredMovies[currentIndex].backdrop_path})`, backgroundSize: 'cover'}}>
       <h2 className='top-rated'>Top Rated IMBD</h2>
       <img src={`${featuredMovies[currentIndex].poster_path}`} id={`${featuredMovies[currentIndex].id}`} alt="current movie" />
+      <div className='featured-details'> {`${featuredMovies[currentIndex].release_date.split().join('').substring(0, 4)} · ${featuredMovies[currentIndex].average_rating.toFixed(2)} rating `}</div>
       <div className='right-arrow' onClick={handleClickRight}><MdOutlineArrowForwardIos /></div>
       <div className='left-arrow' onClick={handleClickLeft}><MdOutlineArrowBackIos /></div>
       <div className='dots-container'>{featuredMovies.map((slide, index) => (
