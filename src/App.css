@@ -157,7 +157,7 @@ body {
 }
 
 .featured img {
-  width: 38.5rem;
+  width: 44rem;
   height: 32rem;
   background-position: center;
   border-radius: 5px;
@@ -251,7 +251,7 @@ body {
   opacity: 1;
 }
 
-.search-bar {
+/* .search-bar {
   align-self: center;
   margin-left: 3.5rem;
 }
@@ -266,7 +266,9 @@ input {
   font-size: 1rem;
   padding: 0rem 0.2rem;
 }
+
 input:hover {
   font-size: 1.1rem;
   color: hsl(204 100% 59%);
-}
+} */
+
